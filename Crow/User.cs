@@ -5,19 +5,26 @@ public class User
     string Nome;
     string Telefone;
     string CPF;
-    public void SetEmail(){
-        
+    string Email;
+    string Password;
+    public void SetNome(string Nome) {
+        this.Nome = Nome;
     }
-    public void SetPassword(){
-        
+    public void SetEmail(string email){
+        this.Email = Email;
     }
-    public void RegisterUser(){
-        
+    public void SetPassword(string Password){
+        this.Password = Password;
     }
-    public void SearchUser(){
+    public void SetCPF(string CPF){
+        this.CPF = CPF;
+    }
+    public void SetPassword(string Password){
+        this.Password = Password;
+    }
+    public string GetNome() {
+        return Nome;
+    }
 
-    }
-    public void DeleteUSer (){
-        
-    }
+      
 }
