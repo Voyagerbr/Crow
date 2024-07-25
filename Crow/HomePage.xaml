@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crow.HomePage">
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="#D3D3D3">
+            <!-- Menu Button -->
+            <Button x:Name="MenuButton"
+                    Text="≡"
+                    FontSize="Large"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Margin="10"
+                    Clicked="OnMenuButtonClicked" />
+
+            <!-- Centered Text -->
+            <Label Text="Clique em ≡ para ver mais opções"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
