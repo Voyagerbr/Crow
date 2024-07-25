@@ -4,21 +4,62 @@
              x:Class="Crow.HomePage">
 
     <ContentPage.Content>
-        <Grid BackgroundColor="#D3D3D3">
-            <!-- Menu Button -->
-            <Button x:Name="MenuButton"
-                    Text="≡"
-                    FontSize="Large"
-                    HorizontalOptions="Start"
-                    VerticalOptions="Start"
-                    Margin="10"
-                    Clicked="OnMenuButtonClicked" />
+        <Grid>
+            <!-- Menu Button as Expander -->
+            <Expander x:Name="MenuExpander" IsExpanded="False">
+                <Expander.Header>
+                    <Grid BackgroundColor="#D3D3D3">
+                        <Button Text="≡"
+                                FontSize="Large"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                Margin="10" />
+                    </Grid>
+                </Expander.Header>
+                <Expander.Content>
+                    <StackLayout BackgroundColor="#A9A9A9" WidthRequest="200">
+                        <ScrollView>
+                            <StackLayout Padding="10">
+                                <!-- Estoque Section -->
+                                <Expander>
+                                    <Expander.Header>
+                                        <Label Text="▼Estoque" FontSize="Medium" TextColor="Black" />
+                                    </Expander.Header>
+                                    <Expander.Content>
+                                        <StackLayout Padding="10, 0">
+                                            <Label Text="• Entrada" FontSize="Small" TextColor="Black" />
+                                            <Label Text="• Saída" FontSize="Small" TextColor="Black" />
+                                        </StackLayout>
+                                    </Expander.Content>
+                                </Expander>
 
-            <!-- Centered Text -->
-            <Label Text="Clique em ≡ para ver mais opções"
-                   FontSize="Medium"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
+                                <!-- Finanças Section -->
+                                <Expander>
+                                    <Expander.Header>
+                                        <Label Text="▼Finanças" FontSize="Medium" TextColor="Black" Margin="0,20,0,0" />
+                                    </Expander.Header>
+                                    <Expander.Content>
+                                        <StackLayout Padding="10, 0">
+                                            <Label Text="• Contas a ver" FontSize="Small" TextColor="Black" />
+                                            <Label Text="• Contas a receber" FontSize="Small" TextColor="Black" />
+                                        </StackLayout>
+                                    </Expander.Content>
+                                </Expander>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </Expander.Content>
+            </Expander>
+
+            <!-- Main Content Area -->
+            <ContentView BackgroundColor="#D3D3D3" Grid.Column="1" Margin="200,0,0,0">
+                <Label Text="Conteúdo Principal" 
+                       FontSize="Large" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" />
+            </ContentView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
+
+

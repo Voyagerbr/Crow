@@ -19,9 +19,7 @@ public class User
     public void SetCPF(string CPF){
         this.CPF = CPF;
     }
-    public void SetPassword(string Password){
-        this.Password = Password;
-    }
+   
     public string GetNome() {
         return Nome;
     }
