@@ -1,6 +1,6 @@
 namespace Crow;
 
-public class ChangScreen
+public class ChangeScreen
 {
     int id;
     

@@ -1,8 +1,91 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Crow.MainPage">
+             x:Class="Crow.MainPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="Contas a Ver">
 
-   
+    <ContentPage.Content>
+        <Grid>
+            <!-- Menu Button as toolkit:Expander -->
+            <toolkit:Expander x:Name="Menutoolkit:Expander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Button Text="≡"
+                            FontSize="Large"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start"
+                            Margin="10" />
+                </toolkit:Expander.Header>
+                <toolkit:Expander.Content>
+                    <StackLayout BackgroundColor="#A9A9A9" WidthRequest="200">
+                        <ScrollView>
+                            <StackLayout Padding="10">
+                                <!-- Estoque Section -->
+                                <toolkit:Expander>
+                                    <toolkit:Expander.Header>
+                                        <Label Text="▼Estoque" FontSize="Medium" TextColor="Black" />
+                                    </toolkit:Expander.Header>
+                                    <toolkit:Expander.Content>
+                                        <StackLayout Padding="10, 0">
+                                            <Label Text="• Entrada" FontSize="Small" TextColor="Black" />
+                                            <Label Text="• Saída" FontSize="Small" TextColor="Black" />
+                                        </StackLayout>
+                                    </toolkit:Expander.Content>
+                                </toolkit:Expander>
 
+                                <!-- Finanças Section -->
+                                <toolkit:Expander>
+                                    <toolkit:Expander.Header>
+                                        <Label Text="▼Finanças" FontSize="Medium" TextColor="Black" Margin="0,20,0,0" />
+                                    </toolkit:Expander.Header>
+                                    <toolkit:Expander.Content>
+                                        <StackLayout Padding="10, 0">
+                                            <Label Text="• Contas a ver" FontSize="Small" TextColor="Black" />
+                                            <Label Text="• Contas a receber" FontSize="Small" TextColor="Black" />
+                                        </StackLayout>
+                                    </toolkit:Expander.Content>
+                                </toolkit:Expander>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </toolkit:Expander.Content>
+            </toolkit:Expander>
+
+            <!-- Main Content Area -->
+            <StackLayout Margin="0,60,0,0" Padding="20">
+                <Label Text="Contas a ver"
+                       FontSize="Large"
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Start" />
+
+                <!-- Contas a ver List -->
+                <ScrollView>
+                    <StackLayout x:Name="ContasList">
+                        <!-- Sample Frame -->
+                        <Frame BorderColor="Black" CornerRadius="10" Padding="10" Margin="10,5">
+                            <StackLayout>
+                                <Label Text="Pedro" FontSize="Medium" />
+                                <Label Text="Valor: R$ xx, xx" FontSize="Small" />
+                                <Label Text="Data: xx/xx/xxxx" FontSize="Small" />
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                    <Button Text="🗑" Clicked="OnDeleteClicked" />
+                                    <Button Text="✔" Clicked="OnCheckClicked" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                        <!-- Add more frames here dynamically -->
+                    </StackLayout>
+                </ScrollView>
+
+                <!-- Add Button -->
+                <Button Text="+"
+                        FontSize="Large"
+                        HorizontalOptions="End"
+                        VerticalOptions="End"
+                        Clicked="OnAddClicked"
+                        Margin="0,10,10,10"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
+

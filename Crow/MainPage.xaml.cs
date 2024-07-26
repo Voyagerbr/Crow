@@ -1,24 +1,33 @@
-﻿namespace Crow;
+﻿using Microsoft.Maui.Controls;
 
-public partial class MainPage : ContentPage
+namespace YourNamespace
 {
-	int count = 0;
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+        private void OnDeleteClicked(object sender, EventArgs e)
+        {
+            // Navegar para a página de remoção
+            Shell.Current.GoToAsync("//ConfirmRemovePage");
+        }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+        private void OnCheckClicked(object sender, EventArgs e)
+        {
+            // Lógica para marcar uma conta como paga e remover da lista
+            // Atualizar a lista de contas
+            DisplayAlert("Pago", "Conta marcada como paga", "OK");
+        }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+        private void OnAddClicked(object sender, EventArgs e)
+        {
+            // Navegar para a página de adicionar
+            Shell.Current.GoToAsync("//AddPage");
+        }
+    }
 }
+
 

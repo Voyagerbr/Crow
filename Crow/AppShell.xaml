@@ -11,5 +11,9 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+        <ShellContent Title="Contas a Ver" ContentTemplate="{DataTemplate local:MainPage}" />
+    <ShellContent Title="Adicionar Conta" ContentTemplate="{DataTemplate local:AddPage}" />
+    <ShellContent Title="Confirmar Adição" ContentTemplate="{DataTemplate local:ConfirmAddPage}" />
+    <ShellContent Title="Confirmar Remoção" ContentTemplate="{DataTemplate local:ConfirmRemovePage}" />
 
 </Shell>
