@@ -1,6 +1,6 @@
 using Microsoft.Maui.Controls;
 
-namespace YourNamespace
+namespace Crow
 {
     public partial class ConfirmRemovePage : ContentPage
     {

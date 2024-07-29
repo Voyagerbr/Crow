@@ -7,13 +7,17 @@
     Shell.FlyoutBehavior="Disabled"
     Title="Crow">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-        <ShellContent Title="Contas a Ver" ContentTemplate="{DataTemplate local:MainPage}" />
-    <ShellContent Title="Adicionar Conta" ContentTemplate="{DataTemplate local:AddPage}" />
-    <ShellContent Title="Confirmar Adição" ContentTemplate="{DataTemplate local:ConfirmAddPage}" />
-    <ShellContent Title="Confirmar Remoção" ContentTemplate="{DataTemplate local:ConfirmRemovePage}" />
+     <ShellContent Title="MainPage" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+    <ShellContent Title="HomePage" ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage" />
+    <ShellContent Title="EntradaPage" ContentTemplate="{DataTemplate local:EntradaPage}" Route="EntradaPage" />
+    <ShellContent Title="SaidaPage" ContentTemplate="{DataTemplate local:SaidaPage}" Route="SaidaPage" />
+    <ShellContent Title="ContasAVerPage" ContentTemplate="{DataTemplate local:ContasAVerPage}" Route="ContasAVerPage" />
+    <ShellContent Title="ContasAReceberPage" ContentTemplate="{DataTemplate local:ContasAReceberPage}" Route="ContasAReceberPage" />
+    <ShellContent Title="AdicionarPage" ContentTemplate="{DataTemplate local:AdicionarPage}" Route="AdicionarPage" />
+    <ShellContent Title="RemoverPage" ContentTemplate="{DataTemplate local:RemoverPage}" Route="RemoverPage" />
+    <ShellContent Title="ConfirmAddPage" ContentTemplate="{DataTemplate local:ConfirmAddPage}" Route="ConfirmAddPage" />
+    <ShellContent Title="ConfirmRemoverPage" ContentTemplate="{DataTemplate local:ConfirmRemoverPage}" Route="ConfirmRemoverPage" />
 
+
+</Shell>
 </Shell>
