@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Crow.AddPage"
-             Title="Adicionar Conta">
+             x:Class="Crow.Add">
 
-    <ContentPage.Content>
-        <StackLayout Padding="20" VerticalOptions="Center">
-            <Label Text="Adicionar" FontSize="Large" HorizontalOptions="Center" />
-            <Entry x:Name="NomeEntry" Placeholder="Nome" />
-            <Entry x:Name="ValorEntry" Placeholder="Valor: R$ xx,xx" />
-            <Entry x:Name="DataEntry" Placeholder="Data: xx/xx/xxxx" />
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Adicionar" Clicked="OnConfirmAddClicked" />
-                <Button Text="Cancelar" Clicked="OnCancelClicked" />
-            </StackLayout>
+    <StackLayout Padding="20">
+        <Label Text="Adicionar"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand"/>
+
+        <Entry x:Name="NameEntry"
+                Placeholder="Nome"/>
+        <Entry x:Name="ValueEntry"
+                Placeholder="Valor"
+                Keyboard="Numeric"/>
+        <Entry x:Name="DateEntry"
+                Placeholder="Data"/>
+
+        <StackLayout Orientation="Horizontal"
+                HorizontalOptions="Center">
+            <Button Text="Adicionar"
+                    Clicked="OnAdicionarButtonClicked"/>
+            <Button Text="Cancelar"
+                    Clicked="OnCancelarButtonClicked"/>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
+
 </ContentPage>

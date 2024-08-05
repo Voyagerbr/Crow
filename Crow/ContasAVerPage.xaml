@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crow.ContasAVerPage">
+
+    <StackLayout Padding="20">
+        <Button Text="≡" Clicked="OnMenuButtonClicked" />
+        <Label Text="Contas a Ver" 
+               FontSize="Large" 
+               HorizontalOptions="Center" 
+               VerticalOptions="StartAndExpand" />
+
+        <StackLayout>
+            <!-- Add frame for items here -->
+        </StackLayout>
+
+        <Button Text="+" 
+                HorizontalOptions="End" 
+                VerticalOptions="End" 
+                Clicked="OnAddButtonClicked" />
+    </StackLayout>
+    
+</ContentPage>

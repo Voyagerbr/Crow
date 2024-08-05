@@ -1,23 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Shell
-    x:Class="Crow.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Crow"
-    Shell.FlyoutBehavior="Disabled"
-    Title="Crow">
+    x:Class="Crow.AppShell">
 
-     <ShellContent Title="MainPage" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
-    <ShellContent Title="HomePage" ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage" />
-    <ShellContent Title="EntradaPage" ContentTemplate="{DataTemplate local:EntradaPage}" Route="EntradaPage" />
-    <ShellContent Title="SaidaPage" ContentTemplate="{DataTemplate local:SaidaPage}" Route="SaidaPage" />
-    <ShellContent Title="ContasAVerPage" ContentTemplate="{DataTemplate local:ContasAVerPage}" Route="ContasAVerPage" />
-    <ShellContent Title="ContasAReceberPage" ContentTemplate="{DataTemplate local:ContasAReceberPage}" Route="ContasAReceberPage" />
-    <ShellContent Title="AdicionarPage" ContentTemplate="{DataTemplate local:AdicionarPage}" Route="AdicionarPage" />
-    <ShellContent Title="RemoverPage" ContentTemplate="{DataTemplate local:RemoverPage}" Route="RemoverPage" />
-    <ShellContent Title="ConfirmAddPage" ContentTemplate="{DataTemplate local:ConfirmAddPage}" Route="ConfirmAddPage" />
-    <ShellContent Title="ConfirmRemoverPage" ContentTemplate="{DataTemplate local:ConfirmRemoverPage}" Route="ConfirmRemoverPage" />
-
+    <ShellContent Route="MainPage"
+            ContentTemplate="{DataTemplate local:MainPage}"/>
+    <ShellContent Route="HomePage"
+            ContentTemplate="{DataTemplate local:HomePage}"/>
+    <ShellContent Route="ContasAVerPage"
+            ContentTemplate="{DataTemplate local:ContasAVerPage}"/>
+    <ShellContent Route="ContasAReceberPage"
+            ContentTemplate="{DataTemplate local:ContasAReceberPage}"/>
+    <ShellContent Route="EntradaPage"
+            ContentTemplate="{DataTemplate local:EntradaPage}"/>
+    <ShellContent Route="SaidaPage"
+            ContentTemplate="{DataTemplate local:SaidaPage}"/>
+    <ShellContent Route="AdicionarPage"
+            ContentTemplate="{DataTemplate local:AdicionarPage}"/>
+    <ShellContent Route="RemoverPage"
+            ContentTemplate="{DataTemplate local:RemoverPage}"/>
+    <ShellContent Route="ConfirmAddPage"
+            ContentTemplate="{DataTemplate local:ConfirmAddPage}"/>
+    <ShellContent Route="ConfirmRemoverPage"
+            ContentTemplate="{DataTemplate local:ConfirmRemoverPage}"/>
 
 </Shell>
-</Shell>
+
