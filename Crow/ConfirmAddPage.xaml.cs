@@ -13,7 +13,7 @@ namespace Crow
         {
             // Adicionar a conta à lista e voltar para a página principal
             Shell.Current.GoToAsync("//MainPage");
-            // Adicionar lógica para adicionar o item à lista
+            // Adicionar lógica para adicionar o item à listaF
         }
 
         private void OnCancelClicked(object sender, EventArgs e)

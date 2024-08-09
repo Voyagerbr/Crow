@@ -5,12 +5,19 @@
              Title="Confirmar Remoção">
 
     <ContentPage.Content>
-        <StackLayout Padding="20" VerticalOptions="Center">
-            <Label Text="Remover" FontSize="Large" HorizontalOptions="Center" />
-            <Label Text="Tem certeza que deseja remover?" HorizontalOptions="Center" />
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Remover" Clicked="OnRemoveClicked" />
-                <Button Text="Voltar" Clicked="OnCancelClicked" />
+        <StackLayout Padding="20"
+                VerticalOptions="Center">
+            <Label Text="Remover"
+                    FontSize="Large"
+                    HorizontalOptions="Center"/>
+            <Label Text="Tem certeza que deseja remover?"
+                    HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                <Button Text="Remover"
+                        Clicked="OnRemoveClicked"/>
+                <Button Text="Voltar"
+                        Clicked="OnCancelClicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
