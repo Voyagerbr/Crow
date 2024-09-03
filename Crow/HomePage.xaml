@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crow.HomePage"
+             BackgroundColor="LightGray"
+             Shell.NavBarIsVisible="False">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        
+        <Button Text="☰"
+                FontSize="24"
+                Clicked="OnMenuButtonClicked"
+                BackgroundColor="Gray"
+                TextColor="Black"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10"/>
+
+
+        
+        <Label Grid.Row="1"
+               Text="Clique em ☰ para ver mais opções"
+               FontSize="20"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+
+        
+        <Frame x:Name="MenuFrame"
+               Grid.RowSpan="2"
+               IsVisible="False"
+               BackgroundColor="Gray"
+               BorderColor="Black"
+               HorizontalOptions="Start"
+               VerticalOptions="FillAndExpand"
+               WidthRequest="200"
+               Padding="10">
+
+            <StackLayout>
+
+                <Button Text="☰"
+                        Clicked="BackClicked"
+                        BackgroundColor="Gray"
+                        FontSize="24"
+                        TextColor="Black"
+                        HorizontalOptions="Start"/>
+
+                <Label Text="Estoque"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+
+                <StackLayout Padding="20,0,0,0">
+                    <Button Text="● Entrada"
+                            TextColor="Black"
+                            Clicked="EntradaButtonIsClicked"
+                            BackgroundColor="Gray"/>
+
+                    <Button Text="● Saída"
+                            TextColor="Black"
+                            Clicked="SaidaButtonIsClicked"
+                            BackgroundColor="Gray"/>
+
+                </StackLayout>
+                <Label Text="Finanças"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0,20,0,0"/>
+
+                <StackLayout Padding="20,0,0,0">
+                    <Button Text="● Contas a Ver"
+                            Clicked="ContasAVerButtonIsClicked"
+                            TextColor="Black"
+                            BackgroundColor="Gray"/>
+
+                    <Button Text="● Contas a Receber"
+                            TextColor="Black"
+                            Clicked="ContasAReceberButtonIsClicked"
+                            BackgroundColor="Gray"/>
+
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </Grid>
+
+</ContentPage>

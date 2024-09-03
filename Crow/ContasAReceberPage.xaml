@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crow.ContasAReceberPage"
+             BackgroundColor="LightGray"
+             Shell.NavBarIsVisible="False">
+
+
+    <Grid x:Name="ContasAReceber">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+
+        </Grid.RowDefinitions>
+
+
+
+
+        <Frame x:Name="AddFrame"
+               BackgroundColor="LightGray"
+               IsVisible="False"
+               BorderColor="Black"
+               Grid.Row="0"
+               Grid.RowSpan="4"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Padding="10"
+               Margin="5">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Adicionar"
+                       FontSize="Title"
+                       HeightRequest="80"
+                       Grid.Row="0"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label x:Name="IdLabel"/>
+                <Entry Placeholder="Nome"
+                       x:Name="NomeEntry"
+                       PlaceholderColor="Black"
+                       Grid.Row="1"
+                       VerticalOptions="StartAndExpand"/>
+                
+                <Entry Placeholder="Sobrenome"
+                       x:Name="SobrenomeEntry"
+                       PlaceholderColor="Black"
+                       Grid.Row="1"
+                       VerticalOptions="StartAndExpand"/>
+
+                <Entry Placeholder="Valor"
+                       Grid.Row="1"
+                       PlaceholderColor="Black"
+                       Keyboard="Numeric"
+                       VerticalOptions="StartAndExpand"/>
+
+                <DatePicker Grid.Row="1"
+                            VerticalOptions="StartAndExpand"/>
+
+                <Button Text="Adicionar"
+                        HeightRequest="70"
+                        Grid.Row="2"
+                        Clicked="Adicionar_Clicked"/>
+
+                <Button Text="Cancelar"
+                        HeightRequest="70"
+                        Grid.Row="3"
+                        Margin="70,0,70,0"
+                        Clicked="Cancelar_Clicked"/>
+
+            </Grid>
+        </Frame>
+
+        <Button Text="☰"
+                FontSize="24"
+                TextColor="Black"
+                Grid.Row="0"
+                x:Name="MenuButton"
+                Clicked="OnMenuButtonClicked"
+                BackgroundColor="Gray"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10"/>
+
+
+
+        <Label Text="Contas A Receber"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               x:Name="MainLabel"
+               Grid.Row="1"
+               Margin="7"
+               VerticalOptions="StartAndExpand"/>
+
+        <Frame x:Name="MenuFrame"
+               Grid.RowSpan="4"
+               IsVisible="False"
+               BackgroundColor="Gray"
+               BorderColor="Black"
+               HorizontalOptions="Start"
+               VerticalOptions="FillAndExpand"
+               WidthRequest="200"
+               Padding="10">
+
+            <StackLayout>
+
+                <Button Text="☰"
+                        Clicked="BackClicked"
+                        BackgroundColor="Gray"
+                        TextColor="Black"
+                        FontSize="24"
+                        HorizontalOptions="Start"/>
+
+                <Label Text="Estoque"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+
+                <StackLayout Padding="20,0,0,0">
+                    <Button Text="● Entrada"
+                            TextColor="Black"
+                            Clicked="EntradaButtonIsClicked"
+                            BackgroundColor="Gray"/>
+
+                    <Button Text="● Saída"
+                            TextColor="Black"
+                            Clicked="SaidaButtonIsClicked"
+                            BackgroundColor="Gray"/>
+
+                </StackLayout>
+                <Label Text="Finanças"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0,20,0,0"/>
+
+                <StackLayout Padding="20,0,0,0">
+                    <Button Text="● Contas a Ver"
+                            Clicked="ContasAVerButtonIsClicked"
+                            TextColor="Black"
+                            BackgroundColor="Gray"/>
+
+                    <Button Text="● Contas a Receber"
+                            TextColor="Black"
+                            Clicked="ContasAReceberButtonIsClicked"
+                            BackgroundColor="Gray"/>
+
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+
+        <Frame Grid.Row="2"
+               BackgroundColor="LightGray"
+               x:Name="ItemsList">
+
+            <CollectionView>
+
+                <CollectionView.ItemsLayout>
+
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10"/>
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Frame BackgroundColor="#FFF"
+                               CornerRadius="20"
+                               WidthRequest="150">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60"/>
+                                </Grid.RowDefinitions>
+                                <Label x:Name="IdLabel"
+                                       Grid.Column="0"/>
+
+                                <Label
+                                    Grid.Column="1"/>
+
+                                <Label 
+                                       Grid.Column="1"/>
+
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+
+        </Frame>
+
+
+        <Button Text="+"
+                x:Name="AddButton"
+                HorizontalOptions="End"
+                Grid.Row="3"
+                VerticalOptions="End"
+                Clicked="OnAddButtonClicked"
+                BackgroundColor="Gray"/>
+
+
+    </Grid>
+
+
+</ContentPage>
