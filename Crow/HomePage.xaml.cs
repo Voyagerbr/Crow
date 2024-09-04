@@ -33,5 +33,9 @@ namespace Crow
         {
             Navigation.PushAsync(new ContasAVerPage());
         }
+        private void CadastroClienteButtonIsClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CadastroClientePage());
+        }
     }
 }

@@ -1,25 +1,17 @@
 using Crow.Modelos;
-
 namespace Crow
 {
-    public partial class EntradaPage : ContentPage
+    public partial class CadastroClientePage : ContentPage
     {
-        //
-        public User cliente { get; set; }
+         public User cliente { get; set; }
         Controles.ClienteControle clienteControle = new Controles.ClienteControle();
         Controles.EstadoControle estadoControle = new Controles.EstadoControle();
-
-        //
-
-
-
-        public EntradaPage()
+        
+        public CadastroClientePage()
         {
             InitializeComponent();
         }
-
-
-        private void OnAddButtonClicked(object sender, EventArgs e)
+    private void OnAddButtonClicked(object sender, EventArgs e)
         {
             ItemsList.IsVisible = false;
             AddButton.IsVisible = false;
@@ -72,7 +64,7 @@ namespace Crow
        private async void Cancelar_Clicked(object sender, EventArgs e)
         {
             // Navegação para outra página
-                await Navigation.PushAsync(new EntradaPage());
+                await Navigation.PushAsync(new CadastroClientePage());
             
         }
         private async void Adicionar_Clicked(object sender, EventArgs e)
@@ -93,7 +85,7 @@ namespace Crow
                 // Mostra a mensagem de sucesso
                 await DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
 
-                Navigation.PushAsync(new EntradaPage());
+                Navigation.PushAsync(new CadastroClientePage());
             }
         }
 
@@ -129,7 +121,4 @@ namespace Crow
             }
         }
     }
-
 }
-
-

@@ -63,6 +63,10 @@ namespace Crow
         {
             Navigation.PushAsync(new ContasAVerPage());
         }
+        private void CadastroClienteButtonIsClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CadastroClientePage());
+        }
 
 
         private void Cancelar_Clicked(Object sender, EventArgs e)
